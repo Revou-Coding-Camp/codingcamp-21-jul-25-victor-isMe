@@ -11,8 +11,7 @@ body{
     width: 100%;
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, rgb(71, 71, 71), rgb(34, 0, 54));
-
+    background: linear-gradient(to right, rgb(86, 172, 253),rgb(59, 105, 255));
 }
 
 header{
@@ -23,20 +22,21 @@ header{
 }
 header h1{
     color: white;
-    font-weight: 700;
+    font-weight: 800;
 }
 header p{
     font-family: Arial, sans-serif;
     font-style: italic;
     color: whitesmoke;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .todo-container{
     text-align: center;
     width: 420px;
+    height: 310px;
     margin: 0 auto;
-    background-color:gray;
+    background-color:rgb(219, 219, 219);
     padding: 15px 20px;
     border-radius: 12px;
 }
@@ -50,37 +50,61 @@ header p{
 }
 .task-add input{
     padding: 7px;
-    color: gray;
-    background-color: rgb(44, 44, 44);
+    color: rgb(0, 0, 0);
+    background-color: rgb(46, 119, 255);
+    border: none;
+    border-radius: 6px;
 }
 .task-add input::placeholder{
-    color:gray;
+    color:rgb(0, 0, 0);
 }
 .task-add button{
-    padding: 7px;
-    font-weight: 600px;
+    padding: 10px;
+    color: black;
+    font-weight: 800px;
     background-color:rgb(0, 119, 255);
+    border: 1px solid transparent;
+    border-radius:6px ;
 }
+.task-add button:hover{
+    border: 1px solid black;
+    color: rgb(255, 255, 255);
+    background-color:rgb(0, 70, 150);
+}
+
 .task-add .task-tools{
     display: flex;
-    margin:16px 0;
+    margin:16px 0 2px;
     justify-content: space-between;
 }
 .task-add .task-tools .task-filter{
-    margin-left:4px;
+    margin-left:6px;
     display: flex;
-    gap: 14px;
+    gap: 13px;
 }
 .task-add .task-tools .task-filter span{
-    padding:6px 0;
+    padding:6px 0 0;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
 }
+.task-add .task-tools .task-filter span:hover{
+    border-bottom: 2px solid blue;
+}
+
 .task-add .task-tools button{
-    margin-right: 4px;
+    margin-right: 6px;
+    padding: 8px;
+    background-color: red;
 }
 
 .task{
-    background-color: rgb(53, 53, 53);
-    padding: 14px;
+    margin: 0 6px 0px 6px;
+    background-color: grey;
+    padding: 5px 14px;
+    border-radius: 6px;
+    min-height: 125px;
+    max-height: 125px;
+    overflow-y: scroll;
 }
 .task li{
     list-style: none;
@@ -88,6 +112,7 @@ header p{
 .task .task-value{
     display:flex;
     justify-content: space-between;
+    padding: 5px 0;
 }
 .task .task-value i{
     font-size: 20px;
